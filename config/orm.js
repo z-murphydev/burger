@@ -2,7 +2,7 @@ const burgersDB = require('./connection.js');
 
 const orm = {
     selectAll: function(table, cb) {
-        burgersDB.query('SELECT * FROM ?', [table], (err, data) => {
+        burgersDB.query('SELECT * FROM ??', [table], (err, data) => {
             if (err) throw err;
 
             cb(data);
