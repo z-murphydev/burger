@@ -1,27 +1,27 @@
 const burgersDB = require('./connection.js');
 
 const orm = {
-    selectAll: function(table) {
+    selectAll: function(table, cb) {
         burgersDB.query('SELECT * FROM ?', [table], (err, data) => {
             if (err) throw err;
 
-            console.log(data);
+            cb(data);
         })
     },
 
-    insertOne: function(burger) {
+    insertOne: function(burger, cb) {
         burgersDB.query('INSERT INTO burgers (burger_name) VALUES (?)', [burger], (err, data) => {
             if (err) throw err;
 
-            console.log(data);
+            cb(data);
         })
     },
 
-    updateOne: function(devoured, id) {
+    updateOne: function(devoured, id, cb) {
         burgersDB.query('UPDATE burgers SET devoured = ? WHERE id = ?', [devoured, id], (err, data) => {
             if (err) throw err;
 
-            console.log(data);
+            cb(data);
         })
     }
 }
