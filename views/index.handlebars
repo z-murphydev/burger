@@ -1,0 +1,33 @@
+<header><h1>Come on down to M U N C H T O W N</h1></header>
+<div id="burgerAddBox">
+<button id="burger-btn">Ready to MUNCH</button>
+<input id="burger_input" type="text" placeholder="Add a burger!">
+</div>
+
+<div class="wrapper">
+
+    <div id="notEaten">
+        <h1>READY TO MUNCH</h1>
+        {{#each burgers}}
+
+        {{#unless devoured}}
+
+        <h2 id="burger-{{id}}">{{burger_name}}</h2>
+        <button data-burger="{{id}}">M U N C H</button>
+        {{/unless}}
+        {{/each}}
+
+    </div>
+
+    <div id="eaten">
+        <h1>MUNCHED</h1>
+        {{#each burgers}}
+
+        {{#if devoured}}
+
+        <h2>{{burger_name}}</h2>
+        {{/if}}
+        {{/each}}
+
+    </div>
+</div>
