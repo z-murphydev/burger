@@ -14,16 +14,17 @@ router.get('/', (req, res) => {
 })
 
 router.post('/create', (req, res) => {
+    console.log(req.body);
     burger.create(req.body.burgerName, (data) => {
 
-        res.redirect('/');
+        res.sendStatus(204);
     })
 })
 
 router.put('/update', (req, res) => {
     burger.update(true, parseInt(req.body.id), (data) => {
 
-        res.redirect('/');
+        res.sendStatus(200);
     })
 })
 

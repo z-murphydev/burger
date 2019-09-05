@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');
+
 *{
     margin: 0;
     box-sizing: border-box;
-    padding: 0;
+    padding: 16px 0px 16px 0px;
     position: relative;
+}
+
+body {
+    background-color: #ff3838;
+    font-family: 'Chilanka', cursive, sans-serif;
 }
 
 .wrapper {
@@ -12,5 +19,36 @@
 }
 
 #burgerAddBox {
+    text-align: center;
     margin: 0 auto;
+}
+
+#burgerAddBox > input {
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+header {
+    text-align: center;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ffaf40;
+    border-radius: 10px;
+}
+
+button:hover{
+    transition: ease-in-out 250ms;
+    background-color: #ff9f1a;
+}
+
+header > h1 {
+    font-size: 55px;
+}
+
+#eaten {
+    color: gray;
 }
